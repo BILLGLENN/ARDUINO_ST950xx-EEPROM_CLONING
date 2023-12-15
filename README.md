@@ -1,5 +1,5 @@
 # ARDUINO_ST950xx-EEPROM_CLONING
-Use most any SPI capable Arduino to CLONE contents of an ST950xx EEPROM
+Use Arduino to CLONE contents of a known-good ST950xx EEPROM directly, byte-for-byte in real time. There is no need to create BIN, HEX, or ASCII data files although the code provides simple ways to do so if desired.  
 
 The genesis of this project stems from the fact that many automobile 'Body Control Modules' (BCM) use this series of ST Micro EEPROM to save the vehicles' accessory and engine operating parameters. Additionally, the EEPROMs are coded with the applicable vehicle's VIN number.
 
@@ -20,4 +20,25 @@ The CLONING routine reads the MASTER's data, one byte at a time, and then WRITES
 
 More will be added to this Readme as necessary.
 
-
+/*  FOREWORD:
+ * 
+ * Special thanks to Robert Middleton for his advice and work shared on GitHub:
+ *
+ * https://github.com/rm5248/m95-eeprom-arduino/commits?author=rm5248 
+ *   
+ * and help with GitHub to complete a personal project that directly "CLONEs" an known-good eeprom's
+ * contents. Adding to his work (and that of others to whom he gives credit for helping him),
+ * I expanded Robert's Arduino-based EEPROM Reader/Writer to include connections to a second EEPROM. 
+ * The purpose of my circuitry was to enable 'CLONING' the content of the original EEPROM's data.
+ * This CLONE was to be an address-to-address / data-to-data copy (CLONE) of the "MASTER" ST95040 EEPROM.
+ * Once the CLONING code has run, supplemental routines are included to VERIFY byte-for-byte data match.
+ * Any data mismatch between the MASTER and CLONE is flagged and displayed during the verification 
+ * process. At the time of this submission, ten new ST95040 (4k EEPROMs) were cloned - each on the first
+ * attempt without errors. Thus, I do consider the design stable. That said, I seek to provide a more elegant
+ * code within the limits of my minimal coding experience.  Improvements are always welcomed with the
+ * hope that, for those who lack high skillsets, contributors will consider this a teaching moment and
+ * shower the code with abundant commentary to enhance other's experience. Thank you in advance for this.
+ * 
+ *  Regards,
+ *  Bill Glenn
+*/
