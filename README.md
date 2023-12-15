@@ -14,7 +14,7 @@ Obviously, by removing and replacing the new BCM's EEPROM with the one from one'
 ABOUT THE CLONING ARDUINO SOFTWARE
 __________________________________
 
-The CLONING software is simple to use but only works if a pair of EEPROMs are connected to Arduino per the schematic diagram provided. I soldered the original EEPROM (MASTER) to a SOI8 PC board. As for the CLONE targets, I use a Zero-Insertion-Force socket (ZIF) as pictured. These sockets are available on Amazon for about $4.  I made 3 or 4 CLONES. Chips are cheap and good insurance for clumsy seniors like myself.
+The CLONING software is simple to use but only works if a pair of EEPROMs are connected to Arduino per the schematic diagram provided. I soldered the original EEPROM (MASTER) to a SOI8 PC board. As for the CLONE targets, I use a HiLetgo brand SIO8 Zero-Insertion-Force socket (ZIF) as pictured and available on Amazon for approximately $4.50 USD each. I easily produced 3 or 4 CLONES of various MASTER chips using these ZIF sockets. They work very well. 
 
 The CLONING routine reads the MASTER's data, one byte at a time, and then WRITES that byte to the exact, corresponding address location on the CLONE 9504xx chip. Using the .ino provided, this process to clone a 4K, 95040 EEPROM, requires less than 3 seconds.  An added feature of the sketch includes a "VERIFICATION" of the cloned data. This verification is a byte-for-byte comparison between the MASTER's data and the data written to the CLONE. Any discrepancies are noted but this should only occur if the CLONE chip is faulty. I ordered my 95040 chips from Digikey ($.34 cents USD each) and have had no failures on the 10 chips I received from Digikey. These are STMicrotronics brand chips.
 
@@ -26,10 +26,8 @@ More will be added to this Readme as necessary.
  *
  * https://github.com/rm5248/m95-eeprom-arduino/commits?author=rm5248 
  *   
- * and help with GitHub to complete a personal project that directly "CLONEs" an known-good eeprom's
- * contents. Adding to his work (and that of others to whom he gives credit for helping him),
- * I expanded Robert's Arduino-based EEPROM Reader/Writer to include connections to a second EEPROM. 
- * The purpose of my circuitry was to enable 'CLONING' the content of the original EEPROM's data.
+   Adding to his work (and that of others to whom he gives credit for helping him),
+   I expanded Robert's Arduino-based EEPROM Reader/Writer to include connections to a second EEPROM. The purpose of my circuitry was to enable 'CLONING' the content of the original EEPROM's data.
  * This CLONE was to be an address-to-address / data-to-data copy (CLONE) of the "MASTER" ST95040 EEPROM.
  * Once the CLONING code has run, supplemental routines are included to VERIFY byte-for-byte data match.
  * Any data mismatch between the MASTER and CLONE is flagged and displayed during the verification 
