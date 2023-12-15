@@ -20,23 +20,14 @@ The CLONING routine reads the MASTER's data, one byte at a time, and then WRITES
 
 More will be added to this Readme as necessary.
 
-/*  FOREWORD:
- * 
- * Special thanks to Robert Middleton for his advice and work shared on GitHub:
- *
- * https://github.com/rm5248/m95-eeprom-arduino/commits?author=rm5248 
- *   
-   Adding to his work (and that of others to whom he gives credit for helping him),
-   I expanded Robert's Arduino-based EEPROM Reader/Writer to include connections to a second EEPROM. The purpose of my circuitry was to enable 'CLONING' the content of the original EEPROM's data.
- * This CLONE was to be an address-to-address / data-to-data copy (CLONE) of the "MASTER" ST95040 EEPROM.
- * Once the CLONING code has run, supplemental routines are included to VERIFY byte-for-byte data match.
- * Any data mismatch between the MASTER and CLONE is flagged and displayed during the verification 
- * process. At the time of this submission, ten new ST95040 (4k EEPROMs) were cloned - each on the first
- * attempt without errors. Thus, I do consider the design stable. That said, I seek to provide a more elegant
- * code within the limits of my minimal coding experience.  Improvements are always welcomed with the
- * hope that, for those who lack high skillsets, contributors will consider this a teaching moment and
- * shower the code with abundant commentary to enhance other's experience. Thank you in advance for this.
- * 
- *  Regards,
- *  Bill Glenn
-*/
+
+Special thanks to Robert Middleton for his advice and work shared on GitHub:
+
+https://github.com/rm5248/m95-eeprom-arduino/commits?author=rm5248 
+  
+Adding to Robert Middleton's work (and that of others to whom he gives credit in helping him),
+I expanded the existing Arduino-based EEPROM Reader/Writer to include connections to a second EEPROM (to be the target for CLONING). The purpose of my circuitry was to enable 'CLONING' of the content of the original EEPROM's data. This CLONE was to be an address-to-address / data-to-data copy (CLONE) of the "MASTER" ST95040 EEPROM.Once the CLONING code has run, supplemental routines are included to VERIFY byte-for-byte data match.Any data mismatch between the MASTER and CLONE is flagged and displayed during the verification process. At the time of this submission, ten new ST95040 (4k EEPROMs) were cloned - each on the firstattempt without errors. Thus, I do consider the design stable. That said, I seek to provide a more elegant code within the limits of my minimal experience.  Improvements are always welcomed in the hope that, for the benefit of those who lack high skillsets, contributors will consider this a teaching moment and adorn the lines of code with commentary. Thank you in advance for this.
+
+Regards,
+Bill Glenn
+
