@@ -1,5 +1,5 @@
 # ARDUINO_ST950xx-EEPROM_CLONING
-Use Arduino to CLONE contents of a known-good ST950xx EEPROM directly, byte-for-byte in real time. There is no need to create BIN, HEX, or ASCII data files although the code provides simple ways to do so if desired.  
+Project Goal: Use Arduino to CLONE (make an exact duplicate) of the contents of a known-good ST950xx EEPROM directly, byte-for-byte in real time, without the need to create and minipulate or otherwise transfer BIN, HEX, or ASCII files. Simply put, from each address location, we read a byte one-by-one from the MASTER EEPROM chip and write the byte to the corresponding address location on a blank "CLONE chip". When done, we have two (or more if desired) EEPROMs with identical contents. 
 
 The genesis of this project stems from the fact that many automobile 'Body Control Modules' (BCM) use this series of ST Micro EEPROM to save the vehicles' accessory and engine operating parameters. Additionally, the EEPROMs are coded with the applicable vehicle's VIN number.
 
