@@ -14,6 +14,8 @@ Obviously, by removing the new/replacement BCM's EEPROM with the actual EEPROM f
 ABOUT THE CLONING ARDUINO SOFTWARE
 __________________________________
 
+NOTE: A complete electrical schematic is included in this repository's DOCS folder for those wishing to build/modify/expand the basic design. AUTODESK EAGLE was used for designing and creating the circuitry. That file is included and recognizable by the unique ".sch" file extention. There is also a standard .pdf version for printing and reference.
+
 The CLONING software is simple to use but only works if a pair of EEPROMs are connected to Arduino per the schematic diagram provided. I soldered the original EEPROM (MASTER) to a SOI8 PC board. As for the CLONE targets, I use a HiLetgo brand SIO8 Zero-Insertion-Force socket (ZIF) as pictured and available on Amazon for approximately $4.50 USD each. I easily produced 3 or 4 CLONES of various MASTER chips using these ZIF sockets. They work very well. 
 
 The CLONING routine reads the MASTER's data, one byte at a time, and then WRITES that byte to the exact, corresponding address location on the CLONE 9504xx chip. Using the .ino provided, this process to clone a 4K, 95040 EEPROM, requires less than 3 seconds.  An added feature of the sketch includes a "VERIFICATION" of the cloned data. This verification is a byte-for-byte comparison between the MASTER's data and the data written to the CLONE. Any discrepancies are noted but this should only occur if the CLONE chip is faulty. I ordered my 95040 chips from Digikey ($.34 cents USD each) and have had no failures on the 10 chips I received from Digikey. These are STMicrotronics brand chips.
