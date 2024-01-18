@@ -27,7 +27,7 @@ The CLONING routine reads the MASTER's data, one byte at a time, and then WRITES
 More will be added to this Readme as necessary.
 
 
-Special thanks to Robert Middleton for his advice and work shared on GitHub:
+Special thanks to Robert Middleton for foundation work shared on GitHub:
 
 https://github.com/rm5248/m95-eeprom-arduino/commits?author=rm5248 
   
